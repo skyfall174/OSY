@@ -1,0 +1,23 @@
+Vytvořte bash skript, který:
+bude číst řádky ze vstupu a pro každou řádku začínající řetězcem “FILE ” zkontroluje, zda existuje soubor jména následujícího za slovem “FILE”
+pokud soubor existuje, pak skript vypíše
+FILE 'cesta/k/souboru' pocet_řádků_souboru '1._řádek_souboru' … pro platný běžný soubor
+DIR 'cesta/k/adresari' … pokud se jedná o adresář
+LINK 'cesta/k/symlinku' 'cesta/k/cilovemu/souboru' … pokud se jedná o symbolický odkaz (včetně neplatných odkazů)
+ERROR 'cesta/k/souboru' … pokud soubor neexistuje (nebo se nejedná o jeden z předchozích případů)
+všechny ostatní řádky skript ignoruje
+dodržujte předepsané formátování výstupu kvůli auto-evaluaci (včetně apostrofů)
+skript bude mít 4 nepovinné přepínače: -h, -v, -z a -n
+přepínač -h vypíše stručnou nápovědu ke skriptu
+přepínač -v na konci běhu vypíše počet platných souborů, adresářů a odkazů (v tomto pořadí a jeden údaj na řádek)
+přepínač -z na konci zabalí všechny platné soubory (symlinky ne) do .tar.gz archivu s názvem 'output.tgz'
+přepínač -n změní formát výstupu tak, že mezi řetězec FILE/DIR/LINK a cestu se vloží aktuální počet souborů resp. adresářů/symlinků (každý typ se čísluje zvlášť)
+výstup pro druhý nalezený soubor pak může vypadat např.:
+FILE 2 '/home/ja/soubory/dokument.txt' 32 'Hello World'
+pořadí přepínačů může být libovolné
+při zadání libovolného jiného přepínače by měl skript skončit chybou
+0 pokud vše dopadne dobře a nejsou zadány žádné chybné cesty
+1 pokud vstup obsahuje nějaké chybné cesty
+2 pokud nastane závažná chyba (špatné argumenty, chyba při vytváření archivu apod.)
+Při psaní skriptu se řiďte běžnými programátorskými zásadami, aby byl skript efektivní, jednoduchý (nekompikovaný), přehledný a snadno pochopitelný.
+Skript nahrajte do odevzdávacího systému, který jej automaticky zkontroluje jeho základní funkčnost. Výsledné body budou připsány cvičícím po následné manuální kontrole.

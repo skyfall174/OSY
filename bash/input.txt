@@ -1,0 +1,11 @@
+FILE ./data/text 1.txt
+proste radek
+FILE /data/text2.txt
+proste radek
+FILE ./data/directory
+proste radek
+FILE/Users/Anastasia/CLionProjects/OSY/bash-script/data/text.txt špatně
+proste radek
+FILE ./data/text
+proste radek
+FILE main
